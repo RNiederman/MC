@@ -1,8 +1,9 @@
 
 from random import sample
 
-A = ["CC", "DA", "NC", "HB", "TH"]
+A = ["CC", "DA", "HB", "NC", "TH"]
 cast_size = 3
+# C = set(A[:cast_size])
 C = set(A[:cast_size])
 print(C)
 
@@ -12,3 +13,7 @@ print(g)
 
 delta = len(C.difference(g))
 print(delta)
+
+a = ["CC", "DA", "HB", "NC", "TH"]
+c = set(a[:cast_size])
+print(c)

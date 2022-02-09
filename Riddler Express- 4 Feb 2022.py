@@ -5,7 +5,7 @@ import time as t
 
 def scream(cast_size=3):
     a = ["CC", "DA", "HB", "NC", "TH"]
-    c = set(sample(a, cast_size))
+    c = set(a[:cast_size])
     g = set(sample(a, cast_size))
     diff = len(c.difference(g))
     return diff <= 1
@@ -13,6 +13,8 @@ def scream(cast_size=3):
 
 Z = 0
 runs = 999999 + 1
+multi = 25
+runs = runs * multi
 starter = t.time()
 
 for i in range(runs):
