@@ -4,7 +4,7 @@ import time as t
 
 
 def scream(cast_size=3):
-    a = ["CC", "DA", "HB", "NC", "TH"]
+    a = ["CC", "DA", "NC", "HB", "TH"]
     c = set(a[:cast_size])
     g = set(sample(a, cast_size))
     diff = len(c.difference(g))
