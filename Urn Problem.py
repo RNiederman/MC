@@ -15,10 +15,11 @@ def urn_problem(b=20, w=20):
         urn = x[z:q]
         q = len(urn)
     return int(urn[0])
+    # 1 you live, 0 you die
 
 
 max_balls = 20
-runs = 50000
+runs = 999999 + 1
 
 for B in range(max_balls):
     for W in range(max_balls):
