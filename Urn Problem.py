@@ -1,9 +1,12 @@
 from random import sample
+import pandas as pd
+import time as t
 
 
-def urn_problem(b=20, w=20):
-    q = b + w
-    urn = ([0] * b) + ([1] * w)
+def urn_problem(black=20, white=20):
+
+    urn = ([0] * black) + ([1] * white)
+    q = len(urn)
 
     while q > 1:
         x = sample(urn, q)
@@ -14,17 +17,26 @@ def urn_problem(b=20, w=20):
             z = q - 1
         urn = x[z:q]
         q = len(urn)
+
     return int(urn[0])
     # 1 you live, 0 you die
 
 
 max_balls = 20
 runs = 25000
+df = pd.DataFrame(columns=['Blk', 'Wht', 'Prb', "RT"])
 
-for B in range(max_balls):
-    for W in range(max_balls):
+for b in range(max_balls):
+    B = b + 1
+    for w in range(max_balls):
+        W = w + 1
         Z = 0
+        starter = t.time()
         for i in range(runs):
-            Temp = urn_problem(B+1, W+1)
-            Z = Z + Temp
-        print("B:{:} W:{:} --> {:.2%}".format(B+1, W+1, Z/runs))
+            Z = Z + urn_problem(B, W)
+        stopper = t.time()
+        print("B:{:} W:{:} --> {:.2%}".format(B, W, Z / runs))
+        df = df.append({'Blk': B, 'Wht': W, 'Prb': Z / runs, 'RT': stopper - starter},
+                       ignore_index=True)
+
+print(df.to_string())
