@@ -19,7 +19,7 @@ def urn_problem(b=20, w=20):
 
 
 max_balls = 20
-runs = 999999 + 1
+runs = 25000
 
 for B in range(max_balls):
     for W in range(max_balls):
