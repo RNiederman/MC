@@ -8,10 +8,10 @@ def urn_problem(b=20, w=20):
     while q > 1:
         x = sample(urn, q)
         y = x[0] ^ 1
-        try:
+        if y in x:
             z = x.index(y)
-        except ValueError:
-            z = 1
+        else:
+            z = q - 1
         urn = x[z:q]
         q = len(urn)
     return int(urn[0])
