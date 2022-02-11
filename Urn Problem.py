@@ -22,13 +22,13 @@ def urn_problem(black=20, white=20):
     # 1 you live, 0 you die
 
 
-MaxM = 20
+Maxx = 20
 runs = 999999 + 1
 df = pd.DataFrame(columns=['Blk', 'Wht', 'Prb', "RT"])
 
-for b in range(MaxM):
+for b in range(Maxx):
     B = b + 1
-    for w in range(MaxM):
+    for w in range(Maxx):
         W = w + 1
         Z = 0
         starter = t.time()
@@ -51,7 +51,7 @@ BigFont = 20
 SmallFont = 12
 ColorMap = "Greys"
 ticks = list(
-    range(int(MaxM/10), MaxM, int(MaxM/10))
+    range(int(Maxx/10), Maxx, int(Maxx/10))
 )
 
 x = df['Blk']
