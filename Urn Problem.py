@@ -3,7 +3,7 @@ import pandas as pd
 import time as t
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.ticker as tick
+import matplotlib.ticker as tk
 
 
 def urn_problem(black=20, white=20):
@@ -51,7 +51,7 @@ Graph_Size = 8
 BigFont = 20
 SmallFont = 12
 ColorMap = "Greys"
-tickers = list(
+ticks = list(
     range(int(MaxM/10), MaxM, int(MaxM/10))
 )
 
@@ -64,9 +64,9 @@ fig = plt.figure(figsize=(4, 4))
 ax = fig.add_subplot(111, projection='3d')
 ax.scatter(x, y, z, c=ColorKey, cmap=ColorMap)
 
-ax.set_xticks(tickers)
-ax.set_yticks(tickers)
-ax.zaxis.set_major_formatter(tick.PercentFormatter(xmax=1, decimals=None))
+ax.set_xticks(ticks)
+ax.set_yticks(ticks)
+ax.zaxis.set_major_formatter(tk.PercentFormatter(xmax=1, decimals=None))
 
 ax.set_title(Graph_Title, fontsize=BigFont)
 ax.set_xlabel(X_Title, fontsize=SmallFont)
