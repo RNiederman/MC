@@ -23,7 +23,7 @@ def urn_problem(black=20, white=20):
 
 
 MaxM = 20
-runs = 25000
+runs = 999999 + 1
 df = pd.DataFrame(columns=['Blk', 'Wht', 'Prb', "RT"])
 
 for b in range(MaxM):
