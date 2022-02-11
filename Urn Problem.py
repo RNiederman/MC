@@ -11,10 +11,7 @@ def urn_problem(black=20, white=20):
     while q > 1:
         x = sample(urn, q)
         y = x[0] ^ 1
-        if y in x:
-            z = x.index(y)
-        else:
-            z = q - 1
+        z = x.index(y) if y in x else q - 1
         urn = x[z:q]
         q = len(urn)
 
@@ -23,7 +20,7 @@ def urn_problem(black=20, white=20):
 
 
 max_balls = 20
-runs = 50000
+runs = 25000
 df = pd.DataFrame(columns=['Blk', 'Wht', 'Prb', "RT"])
 
 for b in range(max_balls):
