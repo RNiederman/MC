@@ -13,13 +13,10 @@ def scream(cast_size=3):
 
 Z = 0
 runs = 999999 + 1
-multi = 25
-runs = runs * multi
 starter = t.time()
 
 for i in range(runs):
-    Q = scream()
-    Z = Z + Q
+    Z = Z + scream()
 
 stopper = t.time()
 
