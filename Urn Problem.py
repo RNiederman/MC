@@ -12,20 +12,20 @@ def urn_problem(black=20, white=20):
         x = sample(urn, q)
         y = x[0] ^ 1
         z = x.index(y) if y in x else q - 1
-        urn = x[z:q]
+        urn = x[z:]
         q = len(urn)
 
     return int(urn[0])
     # 1 you live, 0 you die
 
 
-max_balls = 20
+MaxM = 20
 runs = 25000
 df = pd.DataFrame(columns=['Blk', 'Wht', 'Prb', "RT"])
 
-for b in range(max_balls):
+for b in range(MaxM):
     B = b + 1
-    for w in range(max_balls):
+    for w in range(MaxM):
         W = w + 1
         Z = 0
         starter = t.time()

@@ -1,7 +1,7 @@
 from random import sample
 
-black = 3
-white = 0
+black = 5
+white = 5
 
 urn = ([0] * black) + ([1] * white)
 q = len(urn)
@@ -15,9 +15,15 @@ z = x.index(y) if y in x else q - 1
 print(x)
 print(y)
 print(z)
-urn = x[z:q]
+urn = x[z:]
 print(urn)
 #     q = len(urn)
 #
 #
 # print(int(urn[0]))
+
+# test = ["A", "B", "C", "D"]
+# L = len(test)
+# print(L)
+# print(test[1])
+# print(test[L]) # Should Throw an Error (and does)
