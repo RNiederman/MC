@@ -42,7 +42,7 @@ for b in range(MaxM):
 print(df.to_string())
 
 # Create a 3D Plot
-GraphTitle = "Yarrrr!!"
+G_Title = "Yarrrr!!"
 X_Title = "Black Marbles"
 Y_Title = "White Marbles"
 Z_Title = "Prob of Not Dyin'"
@@ -67,7 +67,7 @@ ax.set_xticks(ticks)
 ax.set_yticks(ticks)
 ax.zaxis.set_major_formatter(tk.PercentFormatter(xmax=1, decimals=None))
 
-ax.set_title(GraphTitle, fontsize=BigFont)
+ax.set_title(G_Title, fontsize=BigFont)
 ax.set_xlabel(X_Title, fontsize=SmallFont)
 ax.set_ylabel(Y_Title, fontsize=SmallFont)
 ax.set_zlabel(Z_Title, fontsize=SmallFont)
