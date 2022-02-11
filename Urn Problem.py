@@ -26,7 +26,6 @@ MaxM = 20
 runs = 25000
 df = pd.DataFrame(columns=['Blk', 'Wht', 'Prb', "RT"])
 
-
 for b in range(MaxM):
     B = b + 1
     for w in range(MaxM):
@@ -43,11 +42,11 @@ for b in range(MaxM):
 print(df.to_string())
 
 # Create a 3D Plot
-Graph_Title = "Yarrrr!!"
+GraphTitle = "Yarrrr!!"
 X_Title = "Black Marbles"
 Y_Title = "White Marbles"
 Z_Title = "Prob of Not Dyin'"
-Graph_Size = 8
+GraphSize = 8
 BigFont = 20
 SmallFont = 12
 ColorMap = "Greys"
@@ -68,7 +67,7 @@ ax.set_xticks(ticks)
 ax.set_yticks(ticks)
 ax.zaxis.set_major_formatter(tk.PercentFormatter(xmax=1, decimals=None))
 
-ax.set_title(Graph_Title, fontsize=BigFont)
+ax.set_title(GraphTitle, fontsize=BigFont)
 ax.set_xlabel(X_Title, fontsize=SmallFont)
 ax.set_ylabel(Y_Title, fontsize=SmallFont)
 ax.set_zlabel(Z_Title, fontsize=SmallFont)
@@ -77,6 +76,6 @@ ax.xaxis.set_pane_color((1.0, 1.0, 1.0, 0.0))
 ax.yaxis.set_pane_color((1.0, 1.0, 1.0, 0.0))
 ax.zaxis.set_pane_color((1.0, 1.0, 1.0, 0.0))
 
-fig.set_size_inches(Graph_Size, Graph_Size)
+fig.set_size_inches(GraphSize, GraphSize)
 
 plt.show()
