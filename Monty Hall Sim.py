@@ -3,7 +3,7 @@ import time as tm
 from random import sample
 
 
-def montey_hall(n_doors=3):
+def monty_hall(n_doors=3):
     choices = 2
     doors_to_open = n_doors - choices
     doors = range(n_doors)
@@ -27,7 +27,7 @@ rest = .5
 df = pd.DataFrame(columns=['Keep Win', 'Swap Win', 'Prize', "Guess", "Swap"])
 
 for i in range(trials):
-    z = montey_hall(d)
+    z = monty_hall(d)
     df = df.append({'Keep Win': z[0], 'Swap Win': z[1],
                     'Prize': z[2], 'Guess': z[3], 'Swap': z[4]}, ignore_index=True)
     if i % burp == 0:
