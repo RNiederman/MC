@@ -1,25 +1,24 @@
-# Import Stuff
 import numpy as np
 import math
 
-Rad: int = 5
-NegRad: int = Rad * -1
+rad: int = 5
+neg_rad: int = rad * -1
 
 n: int = 999999 + 1
-multi = 25
+multi: float = 1
 n = int(n * multi)
 
-x = np.random.uniform(low=NegRad, high=Rad, size=n)
-y = np.random.uniform(low=NegRad, high=Rad, size=n)
+x = np.random.uniform(low=neg_rad, high=rad, size=n)
+y = np.random.uniform(low=neg_rad, high=rad, size=n)
 
-Tester: bool = x ** 2 + y ** 2 <= Rad ** 2
-CirPerc = sum(Tester) / n
+tester: bool = x ** 2 + y ** 2 <= rad ** 2
+cir_perc: float = sum(tester) / n
 
-SqArea = (2 * Rad) ** 2
-CirArea = SqArea * CirPerc
+sq_area: float = (2 * rad) ** 2
+cir_area: float = sq_area * cir_perc
 
-p = CirArea / Rad ** 2
-delta = abs(math.pi - p)
+p: float = cir_area / rad ** 2
+delta: float = abs(math.pi - p)
 
 print(math.pi)
 print(p)

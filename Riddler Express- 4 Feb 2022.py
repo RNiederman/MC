@@ -1,6 +1,6 @@
 # https://fivethirtyeight.com/features/a-riddle-that-will-make-you-scream/
-from random import sample
 import time as t
+from random import sample
 
 
 def scream(cast_size=3):
@@ -11,14 +11,15 @@ def scream(cast_size=3):
     return diff <= 1
 
 
-Z = 0
+z = 0
 runs = 999999 + 1
 starter = t.time()
 
 for i in range(runs):
-    Z = Z + scream()
+    z = z + scream()
 
 stopper = t.time()
 
-print("{:.2%}".format(Z / runs))
-print("{:.2f} seconds".format(stopper - starter))
+print(f"{(z / runs):.2%}")
+print(f"{(stopper - starter):.2f} seconds")
+
