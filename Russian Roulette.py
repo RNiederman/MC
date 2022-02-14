@@ -38,5 +38,5 @@ for i in range(trials):
         print(f"{i:,}/{trials:,}")
         tm.sleep(rest)
 
-print(f"No Spin Win Perc: {no_spin/trials:.2%}")
-print(f"Spin Win Perc: {spin/trials:.2%}")
+print(f"No Spin Live Perc: {no_spin/trials:.2%}")
+print(f"Spin Live Perc: {spin/trials:.2%}")
