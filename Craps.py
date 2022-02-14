@@ -6,7 +6,7 @@ def craps():
     sides = 6
     die = range(1, sides + 1)
     opener = sum(choices(die, k=2))
-#   help = [0, 1,  2,  3, 4, 5, 6,  7, 8, 9, 10, 11, 12]
+    # hp = [0, 1,  2,  3, 4, 5, 6,  7, 8, 9, 10, 11, 12]
     key1 = [0, 0, -1, -1, 0, 0, 0,  1, 0, 0,  0,  1,  0]
     key2 = [0, 0,  0,  0, 0, 0, 0, -1, 0, 0,  0,  0,  0]
     check = key1[opener]
