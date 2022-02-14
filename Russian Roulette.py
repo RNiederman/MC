@@ -17,7 +17,6 @@ def russian_roulette(chambers=6):
     # Spin
     ch = sample(range(0, chambers), 1)[0]
     sp = gun[ch]
-
     return[ns, sp]
 
 
@@ -27,7 +26,6 @@ rest = .25
 
 no_spin = 0
 spin = 0
-
 
 for i in range(trials):
     z = russian_roulette(6)
