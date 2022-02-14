@@ -20,16 +20,16 @@ def monty_hall(n_doors=3):
 
 
 d = 3
-trials = 5000
-burp = 500
-rest = .5
+trials = 1000
+burp = 50
+rest = .75
 
-df = pd.DataFrame(columns=['Keep Win', 'Swap Win', 'Prize', "Guess", "Swap"])
+df = pd.DataFrame(columns=["Keep Win", "Swap Win", "Prize", "Guess", "Swap"])
 
 for i in range(trials):
     z = monty_hall(d)
-    df = df.append({'Keep Win': z[0], 'Swap Win': z[1],
-                    'Prize': z[2], 'Guess': z[3], 'Swap': z[4]}, ignore_index=True)
+    df = df.append({"Keep Win": z[0], "Swap Win": z[1],
+                    "Prize": z[2], "Guess": z[3], "Swap": z[4]}, ignore_index=True)
     if i % burp == 0:
         print(f"{i:,}/{trials:,}")
         tm.sleep(rest)

@@ -26,7 +26,7 @@ def urn_problem(black=20, white=20):
 # Run the Game Muliple Times
 maxx = 20
 runs = 25000
-df = pd.DataFrame(columns=['Blk', 'Wht', 'Prb', "RT"])
+df = pd.DataFrame(columns=["Blk", "Wht", "Prb", "RT"])
 
 for b0 in range(maxx):
     b1 = b0 + 1
@@ -38,7 +38,7 @@ for b0 in range(maxx):
             z = z + urn_problem(b1, w1)
         stopper = tm.time()
         print(f"B:{b1} W:{w1} --> {(z / runs):.2%}")
-        df = df.append({'Blk': b1, 'Wht': w1, 'Prb': z / runs, 'RT': stopper - starter},
+        df = df.append({"Blk": b1, "Wht": w1, "Prb": z / runs, "RT": stopper - starter},
                        ignore_index=True)
 
 print(df.to_string())
@@ -56,9 +56,9 @@ ticks = list(
     range(int(maxx/10), maxx, int(maxx/10))
 )
 
-x = df['Blk']
-y = df['Wht']
-z = df['Prb']
+x = df["Blk"]
+y = df["Wht"]
+z = df["Prb"]
 color_key = np.array(x) - np.array(y)
 
 fig = plt.figure(figsize=(4, 4))
